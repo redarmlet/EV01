@@ -1,11 +1,11 @@
-
+/* Paleta Oficial Pasteleria 1000 Sabores */
 body {
     background-color: #FFF5E1;
     color: #5D4037;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Titulos*/
+/* Titulos y Marca */
 .marca-titulo, .titulo-principal {
     font-family: 'Georgia', 'Times New Roman', serif;
     color: #8B4513;
@@ -16,15 +16,22 @@ body {
     text-decoration: none;
 }
 
+/* Header y Footer en Rosa Suave (#FFC0CB) */
 header {
-    background-color: #ffffff;
-    border-bottom: 2px solid #FFC0CB;
+    background-color: #FFC0CB;
+    border-bottom: 2px solid #8B4513;
 }
 
-/*botones*/
-.btn-navegacion {
+footer {
     background-color: #FFC0CB;
-    color: #5D4037;
+    border-top: 2px solid #8B4513;
+    margin-top: auto;
+}
+
+/* Botones de navegacion sobre fondo rosa */
+.btn-navegacion {
+    background-color: #ffffff;
+    color: #8B4513;
     font-weight: 700;
     border: 1px solid #8B4513;
     border-radius: 8px;
@@ -40,8 +47,8 @@ header {
 }
 
 .btn-navegacion-sm {
-    background-color: #FFC0CB;
-    color: #5D4037;
+    background-color: #FFF5E1;
+    color: #8B4513;
     font-weight: 700;
     font-size: 0.9rem;
     border: 1px solid #8B4513;
@@ -54,9 +61,4 @@ header {
 .btn-navegacion-sm:hover {
     background-color: #8B4513;
     color: #FFF5E1;
-}
-
-footer {
-    background-color: #ffffff;
-    margin-top: auto;
 }

@@ -1,76 +1,116 @@
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF5E1;
+    color: #5D4037;
+}
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #FFC0CB;
+}
+.page-footer {
+    background-color: #FFC0CB;
+    color: #5D4037;
+    margin-top: auto;
+}
+.container{
+    color: #5D4037;
+}
+h5{
+    font-size: .8rem;
+    font-weight: 100;
+    max-width: 100%;
+    
+}
 
+h3{
+    font-size: 1rem;
+    font-weight: 900;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-    h5{
-        font-size: .8rem;
-        font-weight: 100;
-        max-width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
 
-    }
+.logo{
+    width: 150px;
+    padding-top: 5px;
+}
 
-    h3{
-        font-size: 1rem;
-        font-weight: 900;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
+.imagen-producto{
 
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-    }
-
-
-    .imagen-producto{
-
-        width: 100%;
-        height: 50%;
-        &&:hover{
-            cursor: pointer;
-        }
-    }
-
-    .card{
-        max-width: 30vh;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        margin: 4vh;
-        padding: 1vw;
-        border: none;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-    }
-
-
-    .contenedor-cards{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .precio-producto{
-        font-size: 2rem;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-
-        small{
-            font-size: .8rem;
-            font-weight: 300;
-            max-width: 100%;
-            color: rgb(0, 0, 0);
-        }
-    }
-
-    .btn-primary{
-        background-color: rgb(59, 59, 59);
-        border: none;
-        border-radius: .3rem;
-        width: 100%;
-        height: 150%;
-
-        &&:hover{
-            background-color: rgb(90, 243, 115);
-        }
+    width: 100%;
+    height: 50%;
+    &:hover{
+        cursor: pointer;
     }
 }
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    min-height: 90vh;
+    .main{
+        padding: 10%;
+        align-items: center;
+         display: flex;
+         flex-direction: column;
+    }
+}
+.card{
+    max-width: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 4vh;
+    padding: 1vw;
+    border: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+.nav-wrapper{
+    background-color: #FFC0CB;
+
+}
+nav ul a:hover{
+    background-color: #8B4513;
+    color: #FFC0CB;
+}
+
+.contenedor-cards{
+    display: flex;
+    flex-direction: row;
+}
+
+.precio-producto{
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+
+    small{
+        font-size: .8rem;
+        font-weight: 300;
+        max-width: 100%;
+        color: rgb(0, 0, 0);
+    }
+}
+
+.btn-primary{
+    background-color: rgb(59, 59, 59);
+    border: none;
+    border-radius: .3rem;
+    width: 100%;
+    height: 150%;
+
+    &:hover{
+        background-color: rgb(90, 243, 115);
+    }
+}
+
+.marca-titulo {
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+

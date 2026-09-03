@@ -1,6 +1,12 @@
 console.log("hola");
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems);
+});
+
+
 var productos = [
     {
         "id":1,
@@ -75,13 +81,12 @@ const LLAVE = "carrito";
 
 function guardar(producto) {
     var storageActual = localStorage.getItem(LLAVE);
-    var lista = [];
     if (storageActual != null){
         var storageParse = JSON.parse(storageActual);
-        lista.push(producto);
-        storageParse.push(lista);
-        localStorage.setItem(LLAVE.JSON.stringify(storageParse));
+        storageParse.push(producto);
+        localStorage.setItem(LLAVE,JSON.stringify(storageParse));
     }else{
+        var lista = [];
         lista.push(producto);
         localStorage.setItem(LLAVE,JSON.stringify(lista));
     }

@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Producto · Pastelería Mil Sabores</title>
 </head>
 <body>
     <header>
@@ -39,19 +38,11 @@
 
     <main>
         <div class="menu">
-            <h3 class="titulo-menu">Nuestros productos</h3>
-            <div class="layout-productos">
-                <aside class="sidebar-filtros">
-                    <h4 class="sidebar-titulo">Categorías</h4>
-                    <div id="filtros-categoria" class="filtros-lista"></div>
-                </aside>
-
-                <section id="productos"></section>
-            </div>
+            <div id="detalle-producto" class="detalle-producto"></div>
         </div>
     </main>
 
-    <!-- carrito-->
+    <!-- Panel lateral del carrito (deslizante desde la derecha) -->
     <div id="carrito-overlay" class="carrito-overlay"></div>
     <aside id="carrito-panel" class="carrito-panel">
         <div class="carrito-panel-header">
@@ -67,19 +58,6 @@
             <button id="carrito-finalizar" class="btn carrito-finalizar">Finalizar compra</button>
         </div>
     </aside>
-
-    <div id="modal-mensaje" class="modal">
-        <div class="modal-content">
-            <h5>Mensaje personalizado</h5>
-            <p>¿Quieres agregar un mensaje para tu torta? (opcional)</p>
-            <div class="input-field">
-                <textarea id="modal-mensaje-texto" class="materialize-textarea"></textarea>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button id="modal-mensaje-agregar" class="btn modal-mensaje-boton">Agregar al carro</button>
-        </div>
-    </div>
 
     <footer class="page-footer">
         <div class="container">
@@ -107,5 +85,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="carrito.js"></script>
     <script src="script.js"></script>
+    <script src="producto.js"></script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Pasteleria 1000 Sabores - Contacto</title>
+</head>
+<body>
+    <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Registrarse</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Iniciar Sesion</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img src="img/logo01.webp" alt="Pasteleria Mil Sabores" class="logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="Blog.html">Blogs</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Iniciar Sesion<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="menu">
+            <!-- Encabezado de la página -->
+            <section class="main text-center">
+                <h1 class="titulo-menu">Ponte en Contacto</h1>
+                <p class="lead">¿Tienes dudas sobre nuestros productos o quieres hacer un pedido especial? ¡Escríbenos!</p>
+            </section>
+
+            <div class="row w-100">
+                <!-- Formulario de Contacto -->
+                <div class="col s12 m7">
+                    <div class="card white">
+                        <div class="card-content">
+                            <span class="card-title bold">Enviamos un mensaje</span>
+                            <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #e0e0e0;">
+                            
+                            <form action="#!" method="POST">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="nombre" type="text" class="validate" required>
+                                    <label for="nombre">Nombre Completo</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="email" type="email" class="validate" required>
+                                    <label for="email">Correo Electrónico</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="telefono" type="tel" class="validate">
+                                    <label for="telefono">Teléfono de Contacto</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <i class="material-icons prefix">message</i>
+                                    <textarea id="mensaje" class="materialize-textarea" required></textarea>
+                                    <label for="mensaje">Mensaje o Consulta</label>
+                                </div>
+
+                                <div class="right-align mt-2">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                                        Enviar Mensaje <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Datos de Contacto e Información -->
+                <div class="col s12 m5">
+                    <div class="card white">
+                        <div class="card-content">
+                            <span class="card-title bold">Información de Contacto</span>
+                            <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #e0e0e0;">
+                            
+                            <ul class="collection border-0">
+                                <li class="collection-item avatar">
+                                    <i class="material-icons circle orange text-darken-2">place</i>
+                                    <span class="title bold">Dirección</span>
+                                    <p class="grey-text text-darken-1">Av. Principal #1234, Santiago, Chile</p>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <i class="material-icons circle orange text-darken-2">phone</i>
+                                    <span class="title bold">Teléfono</span>
+                                    <p class="grey-text text-darken-1">+56 9 1234 5678</p>
+                                </li>
+                                <li class="collection-item avatar">
+                                    <i class="material-icons circle orange text-darken-2">access_time</i>
+                                    <span class="title bold">Horario de Atención</span>
+                                    <p class="grey-text text-darken-1">Lunes a Sábado: 09:00 - 20:00 hrs<br>Domingos: 10:00 - 15:00 hrs</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Pasteleria 1000 Sabores</h5>
+                    <p class="grey-text text-lighten-4">Celebrando 50 años de la repostería más dulce y tradicional.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2026 - todos los derechos reservados
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

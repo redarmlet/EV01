@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Panel de administración · Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="admin-contenedor">
+            <h3 class="auth-titulo">Panel de administración</h3>
+            <p class="auth-subtitulo" id="admin-bienvenida"></p>
+
+            <div class="admin-grid-resumen">
+                <div class="admin-card-resumen">
+                    <p id="admin-total-usuarios" class="admin-numero">–</p>
+                    <p>Usuarios registrados</p>
+                </div>
+                <div class="admin-card-resumen">
+                    <p id="admin-total-compras" class="admin-numero">–</p>
+                    <p>Pedidos realizados</p>
+                </div>
+                <div class="admin-card-resumen">
+                    <p id="admin-total-recaudado" class="admin-numero">–</p>
+                    <p>Total recaudado</p>
+                </div>
+            </div>
+
+            <div class="admin-seccion">
+                <h5 class="perfil-card-titulo">Pedidos</h5>
+                <table class="striped admin-tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Fecha</th>
+                            <th>Fecha entrega</th>
+                            <th>Descuento</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-tabla-compras"></tbody>
+                </table>
+            </div>
+
+            <div class="admin-seccion">
+                <h5 class="perfil-card-titulo">Usuarios <button id="btn-nuevo-usuario" class="btn" style="float:right; padding:0 10px;">+ Nuevo</button></h5>
+                <table class="striped admin-tabla">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Tipo</th>
+                            <th>Registro</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-tabla-usuarios"></tbody>
+                </table>
+            </div>
+
+            <div class="admin-seccion">
+                <h5 class="perfil-card-titulo">Productos <button id="btn-nuevo-producto" class="btn" style="float:right; padding:0 10px;">+ Nuevo</button></h5>
+                <table class="striped admin-tabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-tabla-productos"></tbody>
+                </table>
+            </div>
+            <div id="admin-formulario-usuarios" class="admin-seccion oculto">
+                <h5 id="form-titulo-user">Editar Usuario</h5>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12">
+                        <input type="text" id="form-user-id" placeholder="ID (ej. USR123)">
+                        <input type="text" id="form-user-nombre" placeholder="Nombre">
+                        <input type="text" id="form-user-apellido" placeholder="Apellido">
+                        <input type="text" id="form-user-correo" placeholder="Correo">
+                        <input type="text" id="form-user-pass" placeholder="Contraseña">
+                        <input type="text" id="form-user-tipo" placeholder="Tipo (admin o cliente)">
+                        <div style="margin-top: 10px;">
+                            <button id="btn-guardar-user" class="btn" style="background-color: #5D4037;">Guardar</button>
+                            <button id="btn-cancelar-user" class="btn-flat">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin-formulario" class="admin-seccion oculto">
+                <h5 id="form-titulo">Editar Registro</h5>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12">
+                        <input type="text" id="form-id" placeholder="ID (ej. TC003)">
+                        <input type="text" id="form-campo1" placeholder="Título">
+                        <input type="text" id="form-campo2" placeholder="Categoría">
+                        <input type="text" id="form-campo3" placeholder="Precio (ej. 45,000)">
+                        <input type="text" id="form-campo4" placeholder="Ruta Imagen (ej. img/pasteles/TC001.png)">
+                        <textarea id="form-campo5" class="materialize-textarea" placeholder="Descripción"></textarea>
+                        <div style="margin-top: 10px;">
+                            <button id="btn-guardar-admin" class="btn" style="background-color: #5D4037;">Guardar</button>
+                            <button id="btn-cancelar-admin" class="btn-flat">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

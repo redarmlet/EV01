@@ -136,21 +136,25 @@ function cerrarCarrito() {
     document.getElementById("carrito-overlay").classList.remove("visible");
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function inicializarCarrito() {
     var botonAbrir = document.getElementById("carrito-boton");
     var botonCerrar = document.getElementById("carrito-cerrar");
     var overlay = document.getElementById("carrito-overlay");
     var botonFinalizar = document.getElementById("carrito-finalizar");
 
-    if (botonAbrir) botonAbrir.addEventListener("click", abrirCarrito);
+    if (botonAbrir) {
+        var nuevoBoton = botonAbrir.cloneNode(true);
+        botonAbrir.parentNode.replaceChild(nuevoBoton, botonAbrir);
+        nuevoBoton.addEventListener("click", abrirCarrito);
+    }
+    
     if (botonCerrar) botonCerrar.addEventListener("click", cerrarCarrito);
     if (overlay) overlay.addEventListener("click", cerrarCarrito);
-
+    
     if (botonFinalizar){
         botonFinalizar.addEventListener("click", function() {
-            M.toast({html: "Próximamente: esta función se activará junto con el sistema de pedidos."});
+            window.location.href = "pago.html";
         });
     }
-
     actualizarContadorCarrito();
-});
+}

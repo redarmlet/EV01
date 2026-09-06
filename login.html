@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Iniciar sesión · Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="auth-contenedor">
+            <div class="auth-card auth-card-chica">
+                <h3 class="auth-titulo">Bienvenido/a</h3>
+                <p class="auth-subtitulo">Ingresa a tu cuenta</p>
+
+                <div id="auth-mensaje" class="auth-mensaje oculto"></div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input id="login-correo" type="email">
+                        <label for="login-correo">Correo electrónico</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="login-password" type="password">
+                        <label for="login-password">Contraseña</label>
+                    </div>
+                </div>
+
+                <button id="btn-login" class="btn auth-btn">
+                    <i class="material-icons left">login</i>Ingresar
+                </button>
+
+                <p class="auth-link-texto">¿No tienes cuenta? <a href="registro.html" class="auth-link">Regístrate</a></p>
+
+                <div class="auth-cuentas-prueba">
+                    <p><strong>Cuentas de prueba</strong></p>
+                    <p>Admin: admin@milsabores.cl · admin1234</p>
+                    <p>Cliente: maria@ejemplo.cl · cliente123</p>
+                    <p>Duoc: pedro.ramirez@duocuc.cl · duoc2024</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</body>
+</html>

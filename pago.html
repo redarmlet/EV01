@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Finalizar compra · Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="pago-contenedor">
+
+            <div class="pago-pasos">
+                <div class="pago-paso activo" id="paso-ind-1">
+                    <div class="pago-paso-num">1</div>
+                    <span>Entrega</span>
+                </div>
+                <div class="pago-paso-linea"></div>
+                <div class="pago-paso" id="paso-ind-2">
+                    <div class="pago-paso-num">2</div>
+                    <span>Pago</span>
+                </div>
+                <div class="pago-paso-linea"></div>
+                <div class="pago-paso" id="paso-ind-3">
+                    <div class="pago-paso-num">3</div>
+                    <span>Confirmar</span>
+                </div>
+            </div>
+
+            <div class="pago-layout">
+
+                <div class="pago-formulario">
+
+                    <div id="paso-1" class="pago-step">
+                        <h4 class="pago-step-titulo">Datos de entrega</h4>
+
+                        <div id="bloque-invitado" class="oculto">
+                            <p class="pago-subseccion">Datos personales</p>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-nombre" type="text">
+                                    <label for="inv-nombre">Nombre</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-apellido" type="text">
+                                    <label for="inv-apellido">Apellido</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-correo" type="email">
+                                    <label for="inv-correo">Correo electrónico</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-nacimiento" type="date">
+                                    <label for="inv-nacimiento" class="active">Fecha de nacimiento</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-password" type="password">
+                                    <label for="inv-password">Contraseña (se creará tu cuenta)</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input id="inv-confirmar" type="password">
+                                    <label for="inv-confirmar">Confirmar contraseña</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="pago-subseccion">Dirección de entrega</p>
+
+                        <div id="bloque-dir-guardada" class="oculto pago-dir-opciones">
+                            <label class="pago-radio-label">
+                                <input type="radio" name="tipo-dir" value="guardada" checked>
+                                <span>Usar mi dirección guardada: <strong id="dir-guardada-texto"></strong></span>
+                            </label>
+                            <label class="pago-radio-label">
+                                <input type="radio" name="tipo-dir" value="nueva">
+                                <span>Usar una dirección diferente</span>
+                            </label>
+                        </div>
+
+                        <div id="bloque-dir-nueva">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="pago-comuna">
+                                        <option value="" disabled selected>Selecciona una comuna</option>
+                                    </select>
+                                    <label>Comuna</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m8">
+                                    <input id="pago-calle" type="text">
+                                    <label for="pago-calle">Calle</label>
+                                </div>
+                                <div class="input-field col s12 m4">
+                                    <input id="pago-numero" type="text">
+                                    <label for="pago-numero">Número</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="pago-subseccion">Fecha de entrega preferida</p>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="pago-fecha-envio" type="date">
+                                <label for="pago-fecha-envio" class="active">Fecha</label>
+                            </div>
+                        </div>
+
+                        <div id="bloque-codigo" class="oculto">
+                            <p class="pago-subseccion">Código de descuento</p>
+                            <div class="pago-codigo-fila">
+                                <div class="input-field pago-codigo-input">
+                                    <input id="pago-codigo" type="text">
+                                    <label for="pago-codigo" class="active">Ej: FELICES50</label>
+                                </div>
+                                <button id="btn-aplicar-codigo" class="btn">Aplicar</button>
+                            </div>
+                            <div id="codigo-resultado" class="auth-mensaje oculto"></div>
+                        </div>
+
+                        <button id="btn-paso1" class="btn pago-btn-siguiente">
+                            Continuar <i class="material-icons right">arrow_forward</i>
+                        </button>
+                    </div>
+
+                    <div id="paso-2" class="pago-step oculto">
+                        <h4 class="pago-step-titulo">Datos de pago</h4>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tarjeta-numero" type="text" maxlength="19">
+                                <label for="tarjeta-numero" class="active">Número de tarjeta</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="tarjeta-nombre" type="text">
+                                <label for="tarjeta-nombre" class="active">Nombre del titular</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="tarjeta-vence" type="text" maxlength="5">
+                                <label for="tarjeta-vence" class="active">Vencimiento (MM/AA)</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="tarjeta-cvv" type="password" maxlength="4">
+                                <label for="tarjeta-cvv" class="active">CVV</label>
+                            </div>
+                        </div>
+
+                        <div class="pago-nav-botones">
+                            <button id="btn-volver-1" class="btn-flat pago-btn-volver">
+                                <i class="material-icons left">arrow_back</i>Volver
+                            </button>
+                            <button id="btn-paso2" class="btn pago-btn-siguiente">
+                                Continuar <i class="material-icons right">arrow_forward</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="paso-3" class="pago-step oculto">
+                        <h4 class="pago-step-titulo">Confirmar pedido</h4>
+
+                        <div class="pago-resumen-final">
+                            <p class="pago-subseccion">Entrega</p>
+                            <div id="conf-direccion" class="conf-bloque"></div>
+                            <div id="conf-fecha" class="conf-bloque"></div>
+                            <p class="pago-subseccion">Pago</p>
+                            <div id="conf-tarjeta" class="conf-bloque"></div>
+                            <p class="pago-subseccion">Productos</p>
+                            <div id="conf-productos" class="conf-bloque"></div>
+                        </div>
+
+                        <div class="pago-nav-botones">
+                            <button id="btn-volver-2" class="btn-flat pago-btn-volver">
+                                <i class="material-icons left">arrow_back</i>Volver
+                            </button>
+                            <button id="btn-confirmar" class="btn pago-btn-confirmar">
+                                <i class="material-icons left">check_circle</i>Confirmar compra
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="paso-exito" class="pago-step oculto">
+                        <div class="pago-exito">
+                            <i class="material-icons pago-exito-icono">check_circle</i>
+                            <h4>¡Pedido confirmado!</h4>
+                            <p id="exito-mensaje"></p>
+                            <a href="productos.html" class="btn" style="margin-top:1.5rem">Seguir comprando</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <aside class="pago-resumen">
+                    <h5 class="pago-resumen-titulo">Tu pedido</h5>
+                    <div id="resumen-items"></div>
+                    <div class="pago-resumen-linea">
+                        <span>Subtotal</span>
+                        <span id="resumen-subtotal">$ 0</span>
+                    </div>
+                    <div id="resumen-descuento-fila" class="pago-resumen-linea pago-resumen-descuento oculto">
+                        <span id="resumen-descuento-label">Descuento</span>
+                        <span id="resumen-descuento-valor">- $ 0</span>
+                    </div>
+                    <div class="pago-resumen-linea pago-resumen-total">
+                        <span>Total</span>
+                        <span id="resumen-total">$ 0</span>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pago.js"></script>
+</body>
+</html>

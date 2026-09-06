@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registrarse · Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="auth-contenedor">
+            <div class="auth-card">
+                <h3 class="auth-titulo">Crear cuenta</h3>
+                <p class="auth-subtitulo">Únete a Pastelería Mil Sabores</p>
+
+                <div id="auth-mensaje" class="auth-mensaje oculto"></div>
+
+                <p class="auth-seccion-titulo">Datos personales</p>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="reg-nombre" type="text">
+                        <label for="reg-nombre">Nombre</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">person_outline</i>
+                        <input id="reg-apellido" type="text">
+                        <label for="reg-apellido">Apellido</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">cake</i>
+                        <input id="reg-nacimiento" type="date">
+                        <label for="reg-nacimiento" class="active">Fecha de nacimiento</label>
+                    </div>
+                </div>
+
+                <p class="auth-seccion-titulo">Cuenta</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input id="reg-correo" type="email">
+                        <label for="reg-correo">Correo electrónico</label>
+                        <span class="helper-text">Usa tu correo @duocuc.cl para obtener beneficios de estudiante</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="reg-password" type="password">
+                        <label for="reg-password">Contraseña</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="reg-confirmar" type="password">
+                        <label for="reg-confirmar">Confirmar contraseña</label>
+                    </div>
+                </div>
+
+                <p class="auth-seccion-titulo">Dirección de entrega</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">location_city</i>
+                        <select id="reg-comuna">
+                            <option value="" disabled selected>Selecciona una comuna</option>
+                        </select>
+                        <label>Comuna</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m8">
+                        <i class="material-icons prefix">home</i>
+                        <input id="reg-calle" type="text">
+                        <label for="reg-calle">Calle</label>
+                    </div>
+                    <div class="input-field col s12 m4">
+                        <i class="material-icons prefix">tag</i>
+                        <input id="reg-numero" type="text">
+                        <label for="reg-numero">Número</label>
+                    </div>
+                </div>
+
+                <p class="auth-seccion-titulo">Código de referencia <span class="auth-opcional">(opcional)</span></p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">card_giftcard</i>
+                        <input id="reg-codigo" type="text">
+                        <label for="reg-codigo" class="active">Ej: FELICES50</label>
+                        <span class="helper-text">Ingresa FELICES50 para obtener un 10% de descuento de por vida</span>
+                    </div>
+                </div>
+
+                <button id="btn-registrar" class="btn auth-btn">
+                    <i class="material-icons left">how_to_reg</i>Crear cuenta
+                </button>
+
+                <p class="auth-link-texto">¿Ya tienes cuenta? <a href="login.html" class="auth-link">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>

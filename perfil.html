@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mi perfil · Pastelería Mil Sabores</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="perfil-contenedor">
+
+            <div class="perfil-header">
+                <div class="perfil-avatar">
+                    <i class="material-icons">account_circle</i>
+                </div>
+                <div class="perfil-header-info">
+                    <h2 id="perfil-nombre-completo"></h2>
+                    <p id="perfil-correo" class="perfil-correo-texto"></p>
+                    <div id="perfil-badges" class="perfil-badges"></div>
+                </div>
+                <button id="btn-cerrar-sesion" class="btn btn-cerrar-sesion">
+                </button>
+            </div>
+
+            <div id="perfil-descuento-banner" class="perfil-descuento-banner oculto"></div>
+            <div id="perfil-torta-banner" class="perfil-torta-banner oculto">
+                🎂 ¡Feliz cumpleaños! Hoy tienes una <strong>torta gratis</strong> por ser estudiante Duoc. Se aplicará en tu próxima compra.
+            </div>
+
+            <div class="perfil-grid">
+
+                <div class="perfil-card">
+                    <h5 class="perfil-card-titulo">Datos personales</h5>
+                    <div class="perfil-dato"><span>Nombre</span><strong id="pd-nombre"></strong></div>
+                    <div class="perfil-dato"><span>Apellido</span><strong id="pd-apellido"></strong></div>
+                    <div class="perfil-dato"><span>Fecha de nacimiento</span><strong id="pd-nacimiento"></strong></div>
+                    <div class="perfil-dato"><span>Edad</span><strong id="pd-edad"></strong></div>
+                </div>
+
+                <div class="perfil-card">
+                    <h5 class="perfil-card-titulo">Dirección de entrega</h5>
+                    <div class="perfil-dato"><span>Comuna</span><strong id="pd-comuna"></strong></div>
+                    <div class="perfil-dato"><span>Calle</span><strong id="pd-calle"></strong></div>
+                    <div class="perfil-dato"><span>Número</span><strong id="pd-numero"></strong></div>
+                </div>
+
+                <div class="perfil-card">
+                    <h5 class="perfil-card-titulo">Mis beneficios</h5>
+                    <div id="pd-beneficios"></div>
+                </div>
+
+                <div class="perfil-card perfil-card-ancho">
+                    <h5 class="perfil-card-titulo">Historial de compras</h5>
+                    <div id="pd-compras"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/datos.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

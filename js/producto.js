@@ -7,8 +7,8 @@ function obtenerIdDesdeURL() {
 
 function dibujarDetalle() {
     var id = obtenerIdDesdeURL();
-    var producto = productos.find(function(p) { return p.id === id; });
-
+    var listaProductos = obtenerProductosLS();
+    var producto = listaProductos.find(function(p) { return p.id === id; });
     if (!producto){
         contenedor.innerHTML =
             '<div class="detalle-no-encontrado">' +
